@@ -270,7 +270,7 @@ jobs:
           password: ${{ github.token }}
       - name: Build ffmpeg
         env:
-          FFMPEG_REPO_OVERRIDE: https://x-access-token:${{ secrets.CLONE_TOKEN }}@github.com/Soloturkh/FFmpegN4.git
+          FFMPEG_REPO_OVERRIDE: https://x-access-token:${{ secrets.COLE_TOKEN2 }}@github.com/Soloturkh/FFmpegN4.git
         run: |
           T="$(echo -n ${{ github.token }} | sha256sum | head -c 64)" && echo -e "::add-mask::${T}\n::stop-commands::${T}"
           ./build.sh ${{ matrix.target }} ${{ matrix.variant }}
