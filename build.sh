@@ -35,10 +35,10 @@ cat <<EOF >"$BUILD_SCRIPT"
 
     git clone --filter=blob:none --branch='$GIT_BRANCH' '$FFMPEG_REPO' ffmpeg
     cd ffmpeg
-    apt-get update && apt-get install -y zlib1g-dev libexpat1-dev
-    apt-get install -y nvidia-cuda-toolkit nvidia-cuda-dev
-    apt-get install -y cuda-cudart-13-x libcufft-13-x
-    apt-get install -y libcufft-dev
+    sudo apt-get update && sudo apt-get install -y zlib1g-dev libexpat1-dev
+    sudo apt-get install -y nvidia-cuda-toolkit nvidia-cuda-dev
+    sudo apt-get install -y cuda-cudart-13-x libcufft-13-x
+    sudo apt-get install -y libcufft-dev
     
     ./configure --prefix=/ffbuild/prefix --pkg-config-flags="--static" \$FFBUILD_TARGET_FLAGS \$FF_CONFIGURE \
         --extra-cflags="\$FF_CFLAGS" --extra-cxxflags="\$FF_CXXFLAGS" --extra-libs="\$FF_LIBS" \
