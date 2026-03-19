@@ -36,6 +36,7 @@ cat <<EOF >"$BUILD_SCRIPT"
     git clone --filter=blob:none --branch='$GIT_BRANCH' '$FFMPEG_REPO' ffmpeg
     cd ffmpeg
     apt-get update && apt-get install -y zlib1g-dev libexpat1-dev
+    apt-get install -y nvidia-cuda-toolkit nvidia-cuda-dev
     apt-get install -y cuda-cudart-13-x libcufft-13-x
     apt-get install -y libcufft-dev
     
