@@ -19,8 +19,6 @@ ffbuild_dockerdl() {
 }
 
 ffbuild_dockerbuild() {
-    sed -i 's/DPL_EXPORT/DPL_STATIC/' src/meson.build
-
     mkdir build && cd build
 
     local myconf=(
